@@ -23,18 +23,18 @@ export default {
   },
   methods: {
     async fetchListTasks() {
-      const response = await axios.get('http://127.0.0.1:8000/contact/' + this.$route.params.id);
+      const response = await axios.get('http://45.89.65.160:8000/contact/' + this.$route.params.id);
       this.task = response.data;
     },
 
     async updateTask() {
-      const response = await axios.put('http://127.0.0.1:8000/contact/' + this.$route.params.id + '/',
+      const response = await axios.put('http://45.89.65.160:8000/contact/' + this.$route.params.id + '/',
           {"name": this.task.name, "phone": this.task.phone},
           {headers: {Authorization: `Bearer ${this.$store.getters.getToken}`}});
     },
 
     async deleteTask() {
-      const response = await axios.delete('http://127.0.0.1:8000/contact/' + this.$route.params.id);
+      const response = await axios.delete('http://45.89.65.160:8000/contact/' + this.$route.params.id);
     }
   },
   mounted() {

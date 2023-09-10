@@ -37,13 +37,13 @@ export default {
   },
   methods: {
     async fetchListTasks() {
-      const response = await axios.get('http://127.0.0.1:8000/contact/');
+      const response = await axios.get('http://45.89.65.160:8000/contact/');
       this.tasks = response.data;
     },
     async createTask(task){
       this.isDialogVisible = false;
       if (!task.title.isEmpty && !task.description.isEmpty){
-        await axios.post('http://127.0.0.1:8000/contact/', {"name": task.name, "phone": task.phone});
+        await axios.post('http://45.89.65.160:8000/contact/', {"name": task.name, "phone": task.phone});
         await this.fetchListTasks();
       }
     },
