@@ -1,8 +1,8 @@
 <template>
   <form @submit.prevent>
     <h2>Create To-Do Task</h2>
-    <my-input class="input__create" placeholder="Title" v-model="task.title"/>
-    <my-textarea placeholder="Description" v-model="task.description"/>
+    <my-input class="input__create" placeholder="Name" v-model="task.name"/>
+    <my-textarea placeholder="Phone" v-model="task.phone"/>
     <my-button class="btn__create" @click="createTask">Create</my-button>
   </form>
 </template>

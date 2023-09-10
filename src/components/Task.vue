@@ -1,18 +1,18 @@
 <template>
 <div class="item">
   <div class="item__info">
-    <router-link :to="{ name: 'taskDetail', params: { id: item.id }}"><div class="item__title" :class="{title_strike: this.item.current_status == 'Выполнено'}"><p>{{ item.title }}</p></div></router-link>
-    <div class="item__description"><p>{{ item.description }}</p></div>
-    <div class="item__date"><p>{{ getBeautifulDate(item.create_date) }}</p></div>
+    <router-link :to="{ name: 'taskDetail', params: { id: item.id }}"><div class="item__title" :class="{title_strike: this.item.current_status == 'Выполнено'}"><p>{{ item.name }}</p></div></router-link>
+<!--    <div class="item__description"><p>{{ item.name }}</p></div>-->
+    <div class="item__description"><p>{{ item.phone }}</p></div>
   </div>
-  <div class="item__status">
-    <input type="checkbox"
-           class="item__status__task"
-           v-model="this.item.current_status"
-           true-value="Выполнено"
-           false-value="Не выполнено"
-           @change="updateStatusTask()">
-  </div>
+<!--  <div class="item__status">-->
+<!--    <input type="checkbox"-->
+<!--           class="item__status__task"-->
+<!--           v-model="this.item.current_status"-->
+<!--           true-value="Выполнено"-->
+<!--           false-value="Не выполнено"-->
+<!--           @change="updateStatusTask()">-->
+<!--  </div>-->
 </div>
 </template>
 

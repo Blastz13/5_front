@@ -34,17 +34,17 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
-
-router.beforeEach((to, from, next) => {
-  const requireAuth = to.matched.some(record => record.meta.auth);
-  if (requireAuth && !localStorage.getItem("token")){
-    next("/login")
-  }
-  else if((to.name == "login" || to.name == "signup") && localStorage.getItem("token")){
-    next(from)
-  }else{
-    next()
-  }
-})
+//
+// router.beforeEach((to, from, next) => {
+//   const requireAuth = to.matched.some(record => record.meta.auth);
+//   if (requireAuth && !localStorage.getItem("token")){
+//     next("/login")
+//   }
+//   else if((to.name == "login" || to.name == "signup") && localStorage.getItem("token")){
+//     next(from)
+//   }else{
+//     next()
+//   }
+// })
 
 export default router
