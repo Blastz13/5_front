@@ -8,25 +8,25 @@ const routes = [
     path: '/',
     name: 'home',
     component: () => import('@/views/HomeView.vue'),
-    meta: {auth: true}
+    // meta: {auth: true}
   },
   {
     path: '/task/:id',
     name: 'taskDetail',
     component: TaskDetailView,
-    meta: {auth: true}
+    // meta: {auth: true}
   },
   {
     path: '/login',
     name: 'login',
     component: LoginView,
-    meta: {auth: false}
+    // meta: {auth: false}
   },
   {
     path: '/signup',
     name: 'signup',
     component: SignUpView,
-    meta: {auth: false}
+    // meta: {auth: false}
   }
 ]
 
